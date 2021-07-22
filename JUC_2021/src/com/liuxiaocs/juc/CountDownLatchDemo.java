@@ -3,7 +3,7 @@ package com.liuxiaocs.juc;
 import java.util.concurrent.CountDownLatch;
 
 // 演示CountDownLatch
-public class countDownLatchDemo {
+public class CountDownLatchDemo {
 
     // 6个同学陆续离开教室之后，班长锁门
     public static void main(String[] args) throws InterruptedException {
