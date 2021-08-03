@@ -42,20 +42,20 @@ public class SyncLockDemo {
         }, "aa").start();
 
         // java.lang.StackOverflowError(循环递归调用，栈溢出异常)
-//        new SyncLockDemo().add();
+        // new SyncLockDemo().add();
 
         // synchronized
-//        Object o = new Object();
-//        new Thread(() -> {
-//            synchronized (o) {
-//                System.out.println(Thread.currentThread().getName() + " 外层");
-//                synchronized (o) {
-//                    System.out.println(Thread.currentThread().getName() + " 中层");
-//                    synchronized (o) {
-//                        System.out.println(Thread.currentThread().getName() + " 内层");
-//                    }
-//                }
-//            }
-//        }, "t1").start();
+        // Object o = new Object();
+        // new Thread(() -> {
+        //    synchronized (o) {
+        //        System.out.println(Thread.currentThread().getName() + " 外层");
+        //        synchronized (o) {
+        //            System.out.println(Thread.currentThread().getName() + " 中层");
+        //            synchronized (o) {
+        //                System.out.println(Thread.currentThread().getName() + " 内层");
+        //            }
+        //        }
+        //    }
+        // }, "t1").start();
     }
 }

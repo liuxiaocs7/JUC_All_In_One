@@ -46,9 +46,9 @@ public class Demo1 {
         new Thread(futureTask1, "mary").start();
 
         // 计算是否完成
-//        while(!futureTask2.isDone()) {
-//            System.out.println("wait......");
-//        }
+        // while(!futureTask2.isDone()) {
+        //    System.out.println("wait......");
+        // }
 
         // 调用FutureTask的get方法
         System.out.println(futureTask2.get());

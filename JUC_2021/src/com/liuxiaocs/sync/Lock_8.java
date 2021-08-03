@@ -99,11 +99,11 @@ public class Lock_8 {
 
         new Thread(() -> {
             try {
-//                 phone.sendEmail();
-//                 phone.getHello();
+                // phone.sendEmail();
+                // phone.getHello();
                 phone2.sendEmail();
 
-//                phone2.sendEmail1();
+               // phone2.sendEmail1();
             } catch (Exception e) {
                 e.printStackTrace();
             }
