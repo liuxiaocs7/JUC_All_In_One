@@ -3,7 +3,7 @@ package com.liuxiaocs;
 /**
  * Thread.currentThread().isDaemon()返回当前线程是否是守护线程，如果结果为true，表示是守护线程，否则为false表示不是守护线程
  * 主线程main结束了，用户线程还在运行
- * <p>
+ *
  * 当主线程结束后，用户线程还在运行，JVM存活
  * 如果没有用户线程，都是守护线程，JVM结束
  */
