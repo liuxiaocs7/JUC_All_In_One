@@ -13,6 +13,16 @@ import lombok.extern.slf4j.Slf4j;
  * 如果一个接口中有多个抽象方法是无法使用lambda来进行简化的
  * <p>
  * 简化方法：复制小括号，写死右箭头，落地大括号
+ *
+ * 两种不同方式的比较：
+ * 1.第一种方式就相当于重写了Thread类中的方法，子类中自然执行的是子类中的run方法 (多态)
+ * 2.第二种方式，将传进去的runnable对象赋值给this.target，进而执行Thread中的run方法，实际执行的是target的run方法 (静态代理)
+ *     @Override
+ *     public void run() {
+ *         if (target != null) {
+ *             target.run();
+ *         }
+ *     }
  */
 @Slf4j(topic = "c2.Test")
 public class Test2 {
