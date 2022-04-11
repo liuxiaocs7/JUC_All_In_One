@@ -20,7 +20,7 @@ import java.util.concurrent.FutureTask;
  * 00:44:02.891 [t1] DEBUG c.Test2 - running
  * 00:44:04.907 [main] DEBUG c.Test2 - 100
  */
-@Slf4j(topic = "c.Test2")
+@Slf4j(topic = "c.Test3")
 public class Test3 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         FutureTask<Integer> task = new FutureTask<>(new Callable<Integer>() {

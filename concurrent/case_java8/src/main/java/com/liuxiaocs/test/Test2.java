@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
  *         }
  *     }
  */
-@Slf4j(topic = "c2.Test")
+@Slf4j(topic = "c2.Test2")
 public class Test2 {
     public static void main(String[] args) {
 
