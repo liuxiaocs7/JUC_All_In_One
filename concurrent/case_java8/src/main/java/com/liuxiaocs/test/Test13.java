@@ -27,6 +27,7 @@ public class Test13 {
 
 @Slf4j(topic = "c.TwoPhaseTermination")
 class TwoPhaseTermination {
+    // 监控线程
     private Thread monitor;
 
     // 启动监控线程
