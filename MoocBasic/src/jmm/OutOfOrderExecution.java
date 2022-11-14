@@ -11,13 +11,14 @@ import java.util.concurrent.CountDownLatch;
  * case3: x = 1, y = 1
  */
 public class OutOfOrderExecution {
-    private static int x = 0, y = 0;
-    private static int a = 0, b = 0;
+    private volatile static int x = 0, y = 0;
+    private volatile static int a = 0, b = 0;
 
     public static void main(String[] args) throws InterruptedException {
         // case1();
         // case2();
 
+        // case3
         for (int i = 0; ; i++) {
             x = 0; y = 0;
             a = 0; b = 0;
@@ -60,6 +61,9 @@ public class OutOfOrderExecution {
         }
     }
 
+    /**
+     * 原始情况
+     */
     private static void case1() throws InterruptedException {
         Thread one = new Thread(new Runnable() {
             @Override
@@ -83,6 +87,9 @@ public class OutOfOrderExecution {
         System.out.println("x = " + x + ", y = " + y);
     }
 
+    /**
+     * 尝试调换顺序解决  错误
+     */
     private static void case2() throws InterruptedException {
         Thread one = new Thread(new Runnable() {
             @Override

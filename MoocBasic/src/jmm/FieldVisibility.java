@@ -9,15 +9,26 @@ package jmm;
  * b = 3, a = 1
  */
 public class FieldVisibility {
-    volatile int a = 1;
+    int a = 1;
+    int abc = 1;
+    int abcd = 1;
     volatile int b = 2;
 
     private void change() {
+        // 写入之前的操作
+        abc = 7;
+        abcd = 70;
         a = 3;
-        b = a;
+        // 写入操作
+        b = 0;
     }
 
     private void print() {
+        if (b == 0) {
+            System.out.println("a = " + a);
+            System.out.println("abc = " + abc);
+            System.out.println("abcd = " + abcd);
+        }
         System.out.println("b = " + b + ", a = " + a);
     }
 
